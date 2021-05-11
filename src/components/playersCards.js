@@ -22,10 +22,11 @@ const PlayersCard = ({
   const handleClick = (type) => {
     switch (type) {
       case 'delete':
-        debugger;
+        // debugger;
         deletePlayer(playerID, user.uid).then((playersArray) => setPlayers(playersArray));
         break;
       case 'edit':
+        debugger;
         setEditing((prevState) => !prevState);
         break;
       case 'view':
@@ -60,6 +61,7 @@ const PlayersCard = ({
              imageURL={imageURL}
              position={position}
              uid={uid}
+             user={user}
             />}
         </CardBody>
     </Card>
